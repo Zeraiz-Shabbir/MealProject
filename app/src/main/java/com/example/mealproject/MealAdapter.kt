@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mealproject.R
 
-class MealRVAdapter(private val meals: List<Meal>,
+class MealAdapter(private val meals: List<Meal>,
                     private val mListener: OnListFragmentInteractionListener?
 )
-    : RecyclerView.Adapter<MealRVAdapter.BookViewHolder>() {
+    : RecyclerView.Adapter<MealAdapter.BookViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.meal, parent, false)

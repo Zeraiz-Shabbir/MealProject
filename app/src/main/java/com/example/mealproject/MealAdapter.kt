@@ -7,10 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.mealproject.R
 
 class MealAdapter(private val meals: List<Meal>,
-                    private val mListener: OnListFragmentInteractionListener?
+                  private val fragment: MainActivity
 )
     : RecyclerView.Adapter<MealAdapter.BookViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
@@ -29,9 +28,7 @@ class MealAdapter(private val meals: List<Meal>,
         val mName: TextView = mView.findViewById<View>(R.id.meal_title) as TextView
         val mImage: ImageView = mView.findViewById<View>(R.id.meal_image) as ImageView
 
-        override fun toString(): String {
-            return mName.toString() + " '"
-        }
+
     }
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
@@ -39,12 +36,6 @@ class MealAdapter(private val meals: List<Meal>,
         val recipe = meals[position]
         holder.mItem = recipe
         holder.mName.text = recipe.MealName
-
-        holder.mView.setOnClickListener {
-            holder.mItem?.let { book ->
-                mListener?.onItemClick(book)
-            }
-        }
 
         Glide.with(holder.mView)
             .load(recipe.MealImage)
@@ -56,11 +47,4 @@ class MealAdapter(private val meals: List<Meal>,
     override fun getItemCount(): Int {
         return meals.size
     }
-}
-
-class OnListFragmentInteractionListener {
-    fun onItemClick(book: Meal) {
-
-    }
-
 }

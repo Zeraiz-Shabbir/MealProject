@@ -9,7 +9,4 @@ class Meal (
 
     @SerializedName("strMealThumb")
     var MealImage: String? = null,
-
-    @SerializedName("idMeal")
-    var MealId: String? = null,
 )

@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val searchText = "fish"
+        val searchText = "salmon"
         val ARTICLE_SEARCH_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + searchText
         val client = AsyncHttpClient()
         client.get(ARTICLE_SEARCH_URL, object : JsonHttpResponseHandler() {
@@ -32,17 +32,18 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
                 try {
+                    Log.e(json.toString(), json.toString())
                     val mealArray = JSONArray(json.jsonObject.get("meals").toString())
                     val models = mutableListOf<Meal>()
 
                     for (i in 0 until mealArray.length()) {
                         val meal = mealArray.getJSONObject(i)
                         val mealName = meal.getString("strMeal")
-                        val mealId = meal.getString("idMeal")
                         val mealImage = meal.getString("strMealThumb")
 
                         // Create a Meal object
-                        val mealObject = Meal(mealName, mealId, mealImage)
+                        val mealObject = Meal(mealName, mealImage)
+                        Log.e(mealObject.toString(), "HELLO")
 
                         // Add the Meal object to the models list
                         models.add(mealObject)
@@ -52,8 +53,8 @@ class MainActivity : AppCompatActivity() {
                     recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
 
                     // Create and set the adapter for the RecyclerView
-                    //val adapter = MealAdapter(models, this@MainActivity)
-                    //recyclerView.adapter = adapter
+                    val adapter = MealAdapter(models, this@MainActivity)
+                    recyclerView.adapter = adapter
                 } catch (e: JSONException) {
                     Log.e(ControlsProviderService.TAG, "Failed to parse response: $e")
                 }

@@ -1,4 +1,4 @@
-# Android Project 2 - Recipe Search
+# Android Project - Recipe Search
 
 Submitted by: **Ibrahim Syed**
 

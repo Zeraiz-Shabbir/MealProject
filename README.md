@@ -9,7 +9,7 @@ https://github.com/Zeraiz-Shabbir/MealProject.git
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/Zeraiz-Shabbir/MealProject/blob/master/MealProject.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Zeraiz-Shabbir/MealProject/blob/master/Meal.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## License

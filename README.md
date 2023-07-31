@@ -1,4 +1,4 @@
-# Android Project 2 - Wishlist
+# Android Project 2 - Recipe Search
 
 Submitted by: **Ibrahim Syed**
 
@@ -8,9 +8,7 @@ Submitted by: **Ibrahim Syed**
 
 Here's a walkthrough of implemented user stories:
 
-<a href="https://www.loom.com/share/41aeceaa7a8f4276ad309ff61a565161">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/41aeceaa7a8f4276ad309ff61a565161-with-play.gif">
-  </a>
+<img src='https://github.com/programmersyed/project6/blob/master/lab6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Loom

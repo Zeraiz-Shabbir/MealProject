@@ -1,6 +1,6 @@
 # Android Project - Recipe Search
 
-Submitted by: **Ibrahim Syed**
+Submitted by: **Zeraiz Shabbir**
 
 **RecipeSearch** is an app that helps the user search for potential recipes that they want to make. In order to run the follwing code,  install Android Studio. Then click file at the top after the installation process and then click clone. Then enter the link provided.
 https://github.com/Zeraiz-Shabbir/MealProject.git
